@@ -11,3 +11,9 @@ export default function MyPortfolio() {
         </>
     )
 }
+
+// ReactDOM.render(<MyPortfolio />, document.getElementById('portfolioRoot'));
+
+// const root = document.getElementById('portfolioRoot');
+// const app = <MyPortfolio />;
+// createRoot(root).render(app);
