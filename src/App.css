@@ -211,16 +211,16 @@ nav {
 .portfolioImageItem {
   position: relative;
   border-radius: 10px;
-  overflow: hidden;
 }
 
 .projectTitleOverlay {
+  color: white;
   text-align: center;
   position: absolute;
   top: 0%;
   width: 100%;
   height: 20%;
-  background-color: #4ca6cf7e
+  background-color: #113d51c2
 }
 
 .techStackOverlay {
@@ -240,7 +240,7 @@ nav {
   }
 
   .techStackOverlay > ul {
-    margin-top: 50%;
+    margin-top: 30%;
   }
   /* PortfolioPageSection End */
 
