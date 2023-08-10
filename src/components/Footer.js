@@ -2,10 +2,10 @@
 export default function Footer() {
     return (
         <div className="footer">
-            <p className="footerName">Alex Murillo</p><br />
+            <p className="footerName">FirstName LastName</p><br />
             <span className="footerPersonalLinks">
-                <a href="https://github.com/emergency22" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/alexdmurillo/" target="_blank">LinkedIn</a>
+                <a href="" target="_blank">GitHub</a>
+                <a href="" target="_blank">LinkedIn</a>
             </span>
         </div>
     )
