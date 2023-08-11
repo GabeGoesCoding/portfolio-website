@@ -34,7 +34,7 @@ Gabe Guio and Alex Murillo, both graduates from Nashville Software School's Soft
 * AWS Route 53 <br>
 * AWS S3 <br>
 * AWS Cloudfront <br>
-
+* AWS Certificate Manager <br>
 </div>
 
 ---

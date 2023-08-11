@@ -17,7 +17,7 @@ export default function AboutMe() {
         <div className="aboutMeItems">
         <div className="aboutMeItem">
             <div className="aboutMeImageItem">
-                <img src={Image} alt="Developer-Image" />
+                <img src={Image} alt="Developer-Image" style={{ width: '300px', height: '450px' }} />
                 <div className="aboutMeImageOverlay">
                     <p>Text text text text. Text text text text.</p>
                 </div>
@@ -28,7 +28,7 @@ export default function AboutMe() {
         <div className="aboutMeItem">
             <h3>Full Stack Developer</h3>
             <div className="aboutMeImageItem">
-                <img src={Image} alt="Personal-Image" />
+                <img src={Image} alt="Personal-Image" style={{ width: '300px', height: '450px' }} />
                 <div className="aboutMeImageOverlay">
                     <p className="bumpedText">Text text text text. Text text text text.</p>
                 </div>
