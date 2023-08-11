@@ -16,9 +16,3 @@ export default function Home() {
         </>
     )
 }
-
-// ReactDOM.render(<Home />, document.getElementById('root'));
-
-// const root = document.getElementById('root');
-// const app = <Home />;
-// createRoot(root).render(app);

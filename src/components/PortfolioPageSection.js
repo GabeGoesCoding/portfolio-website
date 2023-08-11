@@ -3,11 +3,20 @@ import Image1 from '../images/200x300.png'
 import ProjectContent from './ProjectContent'
 
 export default function PortfolioPageSection() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalStates, setModalStates] = useState([false, false, false, false, false, false]);
 
-    const closeModal = () => {
-        setIsModalOpen(false);
-      };
+    const openModal = (index) => {
+        const newModalStates = [...modalStates];
+        newModalStates[index] = true;
+        setModalStates(newModalStates);
+    };
+
+    const closeModal = (index) => {
+        const newModalStates = [...modalStates];
+        newModalStates[index] = false;
+        setModalStates(newModalStates);
+    };
+
 
 
     return (
@@ -16,8 +25,8 @@ export default function PortfolioPageSection() {
 
             <div className="portfolioStyle">
                 <div className="portfolioItem">
-                <div className="portfolioImageItem" onClick={() => setIsModalOpen(true)}>
-                    <img src={Image1} alt="Image 1 " /><br />
+                <div className="portfolioImageItem" onClick={() => openModal(0)}>
+                    <img src={Image1} alt="Image 1 " style={{ width: '200px', height: '300px' }} /><br />
                     <div className="projectTitleOverlay">
                         <p>Project Title</p>
                     </div>
@@ -31,10 +40,10 @@ export default function PortfolioPageSection() {
                         </ul>
                     </div></div>
 
-                    {isModalOpen && (
+                    {modalStates[0] && (
                         <div className="modalBackdrop">
-                            <div className="modalContent" onClick={closeModal}>
-                                {<ProjectContent />}
+                            <div className="modalContent" onClick={() => closeModal(0)}>
+                                <ProjectContent />
                             </div>
                         </div>
                     )}
@@ -43,8 +52,8 @@ export default function PortfolioPageSection() {
                     <a href="" target="_blank">GitHub Repo</a>
                 </div>
                 <div className="portfolioItem">
-                <div className="portfolioImageItem" onClick={() => setIsModalOpen(true)}>
-                    <img src={Image1} alt="Image 2 " /><br />
+                <div className="portfolioImageItem" onClick={() => openModal(1)}>
+                    <img src={Image1} alt="Image 2 " style={{ width: '200px', height: '300px' }} /><br />
                     <div className="projectTitleOverlay">
                         <p>Project Title</p>
                     </div>
@@ -58,10 +67,10 @@ export default function PortfolioPageSection() {
                         </ul>
                     </div></div>
 
-                    {isModalOpen && (
+                    {modalStates[1] && (
                         <div className="modalBackdrop">
-                            <div className="modalContent" onClick={closeModal}>
-                                {<ProjectContent />}
+                            <div className="modalContent" onClick={() => closeModal(1)}>
+                                <ProjectContent />
                             </div>
                         </div>
                     )}
@@ -70,8 +79,8 @@ export default function PortfolioPageSection() {
                     <a href="" target="_blank">GitHub Repo</a>
                 </div>
                 <div className="portfolioItem">
-                <div className="portfolioImageItem" onClick={() => setIsModalOpen(true)}>
-                    <img src={Image1} alt="Image 3 " /><br />
+                <div className="portfolioImageItem" onClick={() => openModal(2)}>
+                    <img src={Image1} alt="Image 3 " style={{ width: '200px', height: '300px' }} /><br />
                     <div className="projectTitleOverlay">
                         <p>Project Title</p>
                     </div>
@@ -85,10 +94,10 @@ export default function PortfolioPageSection() {
                         </ul>
                     </div></div>
 
-                    {isModalOpen && (
+                    {modalStates[2] && (
                         <div className="modalBackdrop">
-                            <div className="modalContent" onClick={closeModal}>
-                                {<ProjectContent />}
+                            <div className="modalContent" onClick={() => closeModal(2)}>
+                                <ProjectContent />
                             </div>
                         </div>
                     )}
@@ -102,8 +111,8 @@ export default function PortfolioPageSection() {
 
             <div className="portfolioStyle">
                 <div className="portfolioItem">
-                <div className="portfolioImageItem" onClick={() => setIsModalOpen(true)}>
-                    <img src={Image1} alt="Image 4 " /><br />
+                <div className="portfolioImageItem" onClick={() => openModal(3)}>
+                    <img src={Image1} alt="Image 4 " style={{ width: '200px', height: '300px' }} /><br />
                     <div className="projectTitleOverlay">
                         <p>Project Title</p>
                     </div>
@@ -117,10 +126,10 @@ export default function PortfolioPageSection() {
                         </ul>
                     </div></div>
 
-                    {isModalOpen && (
+                    {modalStates[3] && (
                         <div className="modalBackdrop">
-                            <div className="modalContent" onClick={closeModal}>
-                                {<ProjectContent />}
+                            <div className="modalContent" onClick={() => closeModal(3)}>
+                                <ProjectContent />
                             </div>
                         </div>
                     )}
@@ -129,8 +138,8 @@ export default function PortfolioPageSection() {
                     <a href="" target="_blank">GitHub Repo</a>
                 </div>
                 <div className="portfolioItem">
-                <div className="portfolioImageItem" onClick={() => setIsModalOpen(true)}>
-                    <img src={Image1} alt="Image 5 " /><br />
+                <div className="portfolioImageItem" onClick={() => openModal(4)}>
+                    <img src={Image1} alt="Image 4 " style={{ width: '200px', height: '300px' }} /><br />
                     <div className="projectTitleOverlay">
                         <p>Project Title</p>
                     </div>
@@ -144,10 +153,10 @@ export default function PortfolioPageSection() {
                         </ul>
                     </div></div>
 
-                    {isModalOpen && (
+                    {modalStates[4] && (
                         <div className="modalBackdrop">
-                            <div className="modalContent" onClick={closeModal}>
-                                {<ProjectContent />}
+                            <div className="modalContent" onClick={() => closeModal(3)}>
+                                <ProjectContent />
                             </div>
                         </div>
                     )}
@@ -156,8 +165,8 @@ export default function PortfolioPageSection() {
                     <a href="" target="_blank">GitHub Repo</a>
                 </div>
                 <div className="portfolioItem">
-                <div className="portfolioImageItem" onClick={() => setIsModalOpen(true)}>
-                    <img src={Image1} alt="Image 6 " /><br />
+                <div className="portfolioImageItem" onClick={() => openModal(5)}>
+                    <img src={Image1} alt="Image 4 " style={{ width: '200px', height: '300px' }} /><br />
                     <div className="projectTitleOverlay">
                         <p>Project Title</p>
                     </div>
@@ -171,20 +180,20 @@ export default function PortfolioPageSection() {
                         </ul>
                     </div></div>
 
-                    {isModalOpen && (
+                    {modalStates[5] && (
                         <div className="modalBackdrop">
-                            <div className="modalContent" onClick={closeModal}>
-                                {<ProjectContent />}
+                            <div className="modalContent" onClick={() => closeModal(3)}>
+                                <ProjectContent />
                             </div>
                         </div>
                     )}
-                    
+
                     <a href="" target="_blank">Video Demo</a><br />
                     <a href="" target="_blank">GitHub Repo</a>
                 </div>
+
+
             </div>
-
-
 
         </div>
 
